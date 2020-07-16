@@ -10,7 +10,6 @@
 
 # NodeName: GQL - Documents Rollup (BASE)
 
----
 
 ## Child Items Tab
 
