@@ -1,14 +1,15 @@
-- [# NodeName: GQL - Documents Rollup (BASE)](#h1-idnodename-gql---documents-rollup-base-7nodename-gql---documents-rollup-baseh1)
-- [Child Items Tab](#child-items-tab)
-- [Configuration Properties Tab](#configuration-properties-tab)
-- [Properties Tab](#properties-tab)
-  - [Properties](#properties)
-  - [Template](#template)
-- [# Child Configurations](#h1-idchild-configurations-7child-configurationsh1)
-- [# NodeName: Document Search - GQL](#h1-idnodename-document-search---gql-7nodename-document-search---gqlh1)
-- [# NodeName: Document Search - GQL (Lazy)](#h1-idnodename-document-search---gql-lazy-7nodename-document-search---gql-lazyh1)
+- [NodeName: GQL - Documents Rollup (BASE)](#nodename-gql---documents-rollup-base)
+  - [Child Items Tab](#child-items-tab)
+  - [Configuration Properties Tab](#configuration-properties-tab)
+  - [Properties Tab](#properties-tab)
+    - [Properties](#properties)
+    - [Template](#template)
+- [Child Configurations](#child-configurations)
+- [NodeName: Document Search - GQL](#nodename-document-search---gql)
+- [NodeName: Document Search - GQL (Lazy)](#nodename-document-search---gql-lazy)
 
 # NodeName: GQL - Documents Rollup (BASE)
+
 ---
 
 ## Child Items Tab
@@ -17,7 +18,6 @@
 |---|---|---|
 |Document Search - GQL||2020-07-15T03:47:36.513Z|
 |Document Search - GQL (Lazy)|1|2020-07-15T05:41:21.576Z|
-
 
 ## Configuration Properties Tab
 
@@ -31,7 +31,6 @@
 |Max columns||
 |Restricted?||
 
-
 ## Properties Tab
 
 |Property|Value|
@@ -39,7 +38,6 @@
 |Alias|gqlDocumentRollup|
 |Feature Dependencies||
 |Max JSON Serialization Depth|1|
-
 
 ### Properties
 
@@ -51,7 +49,6 @@
 |viewModel|View Model|Unily Query Processor Script||
 |viewAllUrl|View All URL|Textstring||
 |buttonText|View All Button Text|Announcement Status Dropdown||
-
 
 ### Template
 
@@ -97,10 +94,13 @@
   </div>
 </div>
 ```
+
 # Child Configurations
+
 ---
 
 # NodeName: Document Search - GQL
+
 ---
 
 <h2>Widget Configuration</h2>
@@ -113,7 +113,7 @@
 <h3>categories</h3>
 
 ``` JS
-1375,1376,1379,1378,1384,1386,3580,3581,3543,1392,1385
+
 ```
 <h3>gql</h3>
 
@@ -165,6 +165,7 @@ query documents($documentQuery: String = "+documentTypePath:(UnilyDocument)") {
 }
 
 ```
+
 <h3>viewModel</h3>
 
 ``` JS
@@ -227,22 +228,27 @@ function(queryContextProvider, gqlService){
  }
 }
 ```
+
 <h3>viewAllUrl</h3>
 
 ``` JS
 
 ```
+
 <h3>buttonText</h3>
 
 ``` JS
 
 ```
+
 <h3>locations</h3>
 
 ``` JS
 
 ```
+
 # NodeName: Document Search - GQL (Lazy)
+
 ---
 
 <h2>Widget Configuration</h2>
@@ -255,8 +261,8 @@ function(queryContextProvider, gqlService){
 <h3>categories</h3>
 
 ``` JS
-1375,1376,1379,1378,1384,1386,3580,3581,3543,1392,1385
 ```
+
 <h3>gql</h3>
 
 ``` JS
@@ -323,8 +329,8 @@ function(lazyQueryContextProvider, gqlService){
   unenrichedWidget: unenrichedWidget,
   baseQuery: "",
   searchFields: searchFields,
-  //gql: widget.gql,
-  // include first results. 
+  gql: widget.gql,
+  // include first results.
   results: null
  };
  
@@ -367,16 +373,19 @@ function(lazyQueryContextProvider, gqlService){
  }
 }
 ```
+
 <h3>viewAllUrl</h3>
 
 ``` JS
 
 ```
+
 <h3>buttonText</h3>
 
 ``` JS
 
 ```
+
 <h3>locations</h3>
 
 ``` JS
