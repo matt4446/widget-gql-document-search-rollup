@@ -1,0 +1,145 @@
+{
+    "id": 13758,
+    "lastModifiedDate": "2020-07-15T03:16:57.26Z",
+    "createdDate": "0001-01-01T00:00:00Z",
+    "properties": [
+      {
+        "alias": "managePermissions",
+        "value": null,
+        "id": 0,
+        "guid": "e2eea1f3-c1f6-42a2-a790-fb0be24c8d7d"
+      },
+      {
+        "alias": "widgetPreviewImage",
+        "value": null,
+        "id": 0,
+        "guid": "dca31539-9403-4e62-adb9-8af92dbb6b6e"
+      },
+      {
+        "alias": "widgetTemplate",
+        "value": "<div class=\"widgets stories-rollup\" gql-document-search-rollup gql=\"gql\" search-fields=\"viewModel.searchFieds\" base-query=\"viewModel.baseQuery\" results=\"viewModel.results\" >\r\n    <div class=\"widgets__title\" ng-if=\"title\">\r\n        <span class=\"widgets__icon\">\r\n            <span class=\"{{::icon}}\"></span>\r\n        </span>\r\n        <h3 class=\"title\">{{::title}}</h3>\r\n    </div>\r\n\r\n    <div class=\"widgets__sub-search\">\r\n        <div class=\"input-wrapper ng-isolate-scope\">\r\n            <input type=\"text\" class=\"form-control ng-valid needsclick ng-not-empty ng-dirty ng-valid-parse ng-touched\" \r\n             ng-model=\"$gqlDocumentSearchRollup.searchText\"\r\n             ng-model-options='{ debounce: 1000 }'\r\n             ng-change='$gqlDocumentSearchRollup.search()'\r\n             placeholder=\"{{:: 'Social.Search' | term }} ...\">\r\n        </div>\r\n    </div>\r\n    <div ng-if=\"$gqlDocumentSearchRollup.results.data.content.documents.data\">\r\n        <p style=\"padding-top: 15px; padding-left: 15px; padding-bottom: 10px; border-bottom: 1px solid #D3D3D3\">Showing {{$gqlDocumentSearchRollup.results.data.content.documents.data.length}} of {{ $gqlDocumentSearchRollup.results.data.content.documents.totalRows }} ...</p>\r\n        <div class=\"widgets__body\" ng-style=\"{ 'height' : (((numItems || 5) * 70) + 'px')}\" custom-scroll-bar>\r\n            <div ng-repeat=\"item in $gqlDocumentSearchRollup.results.data.content.documents.data\">\r\n                <a ng-href=\"{{::item.url}}\" class=\"media\">\r\n                    <div class=\"media-left media-middle\">\r\n                        <span class=\"icon {{ item.properties.umbracoExtension | gqlDocumentSearchRollupIconClass }}\"></span>\r\n                    </div>\r\n                    <div class=\"media-body media-middle\">\r\n                        <h4 class=\"media-heading ellipsis\" ellipsis=\"\"><span>{{::item.properties.title}}</span></h4>\r\n                        <p class=\"media-desc\">{{:: 'Placeholder.Modified' | term }}: {{::item.lastModifiedDate | date:'MMMM dd, yyyy' }}</p>\r\n                        <p class=\"media-desc\"><span class=\"badge badge-secondary\" ng-repeat=\"term in item.properties.categoryField\">{{::term.openGraphSummary.title }}</span></p>\r\n                        <p class=\"media-desc\"><span class=\"badge badge-primaryy\" ng-repeat=\"term in item.properties.location\">{{::term.openGraphSummary.title }}</span></p>\r\n                    </div>\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div ng-if=\"!$gqlDocumentSearchRollup.loading && !$gqlDocumentSearchRollup.results.data.content.documents.data\" class=\"widgets__body\">\r\n        <p class=\"no-results\">{{::'Placeholder.NoFilterData' | term}}</p>\r\n    </div>\r\n\r\n    <div ng-if=\"$gqlDocumentSearchRollup.loading\" class=\"widgets__body\">\r\n        <p class=\"no-results\">{{::'Placeholder.Loading' | term}}</p>\r\n    </div>\r\n\r\n\r\n    <div ng-if=\"viewAllUrl\" class=\"widgets__footer\">\r\n        <a class=\"btn widgets__footer__btn\" ng-href=\"{{::viewAllUrl}}\">{{:: buttonText || ('Button.ViewAll' | term) }}</a>\r\n    </div>\r\n    \r\n</div>\r\n",
+        "id": 469562,
+        "guid": "588436ea-a7b2-4ab3-996e-5f3d2fea7e15"
+      },
+      {
+        "alias": "properties",
+        "value": "[\r\n  {\r\n    \"dataType\": {\r\n      \"id\": 1163,\r\n      \"name\": \"Unily Category Picker W/O Permissions\",\r\n      \"databaseType\": \"Ntext\",\r\n      \"editorAlias\": \"Unily.CategoryPickerWOPermissions\",\r\n      \"displayName\": \"Unily Category Picker W/O Permissions\"\r\n    },\r\n    \"name\": \"categories\",\r\n    \"label\": \"Categories\"\r\n  },\r\n  {\r\n    \"dataType\": {\r\n      \"id\": 1070,\r\n      \"name\": \"Unily Location Picker\",\r\n      \"databaseType\": \"Ntext\",\r\n      \"editorAlias\": \"Unily.TermPicker\",\r\n      \"displayName\": \"Locations Picker\"\r\n    },\r\n    \"name\": \"locations\",\r\n    \"label\": \"Locations\"\r\n  },\r\n  {\r\n    \"dataType\": {\r\n      \"id\": 1267,\r\n      \"name\": \"Unily Template Code Editor\",\r\n      \"databaseType\": \"Ntext\",\r\n      \"editorAlias\": \"Unily.TemplateCodeEditor\",\r\n      \"displayName\": \"Template Code Editor\"\r\n    },\r\n    \"name\": \"gql\",\r\n    \"label\": \"GQL\"\r\n  },\r\n  {\r\n    \"dataType\": {\r\n      \"id\": 3202,\r\n      \"name\": \"Unily Query Processor Script\",\r\n      \"databaseType\": \"Ntext\",\r\n      \"editorAlias\": \"Unily.QueryProcessorScript\",\r\n      \"displayName\": \"Query Processor Script\"\r\n    },\r\n    \"name\": \"viewModel\",\r\n    \"label\": \"View Model\"\r\n  },\r\n  {\r\n    \"dataType\": {\r\n      \"id\": -88,\r\n      \"name\": \"Textstring\",\r\n      \"databaseType\": \"Nvarchar\",\r\n      \"editorAlias\": \"Umbraco.Textbox\",\r\n      \"displayName\": \"Text String\"\r\n    },\r\n    \"name\": \"viewAllUrl\",\r\n    \"label\": \"View All URL\"\r\n  },\r\n  {\r\n    \"dataType\": {\r\n      \"id\": 4627,\r\n      \"name\": \"Announcement Status Dropdown\",\r\n      \"databaseType\": \"Nvarchar\",\r\n      \"editorAlias\": \"Umbraco.DropDown\",\r\n      \"displayName\": \"Announcement Status Dropdown\"\r\n    },\r\n    \"name\": \"buttonText\",\r\n    \"label\": \"View All Button Text\"\r\n  }\r\n]",
+        "id": 469563,
+        "guid": "be22da4a-497f-40aa-b649-6c4885a6a23d"
+      },
+      {
+        "alias": "MaxDepth",
+        "value": "1",
+        "id": 469564,
+        "guid": "daea7602-fa68-450a-831a-b3c7df327e2e"
+      },
+      {
+        "alias": "widgetFeatureDependencies",
+        "value": null,
+        "id": 0,
+        "guid": "c86e4988-83ef-4286-8689-c2df509af788"
+      },
+      {
+        "alias": "widgetAlias",
+        "value": "gqlDocumentRollup",
+        "id": 469565,
+        "guid": "d0e26287-dce3-4993-8743-a5256c4181b8"
+      },
+      {
+        "alias": "widgetPlatform",
+        "value": "165",
+        "id": 469566,
+        "guid": "c61dfdfb-d0de-4d7a-9a9a-5ab5ba2be735"
+      },
+      {
+        "alias": "icon",
+        "value": null,
+        "id": 0,
+        "guid": "6b413322-4771-4e49-a348-44360b8c0c7f"
+      },
+      {
+        "alias": "widgetCategory",
+        "value": null,
+        "id": 0,
+        "guid": "0f9a779a-74fc-4c94-9d53-104a73f7f065"
+      },
+      {
+        "alias": "description",
+        "value": null,
+        "id": 0,
+        "guid": "1988f52c-40da-40ca-979a-9e3728064136"
+      },
+      {
+        "alias": "widgetMinColumns",
+        "value": null,
+        "id": 0,
+        "guid": "05dae243-00ae-4d2c-9d2c-ce8cb4aab866"
+      },
+      {
+        "alias": "widgetMaxColumns",
+        "value": null,
+        "id": 0,
+        "guid": "6038a24e-681a-4474-8fc3-61ca83e84ef8"
+      },
+      {
+        "alias": "widgetUserTypes",
+        "value": null,
+        "id": 0,
+        "guid": "d52f8e66-bd03-43fd-8407-1bd9940be26b"
+      },
+      {
+        "alias": "widgetRestricted",
+        "value": "0",
+        "id": 469567,
+        "guid": "48887357-a849-42ad-96d3-18b552c0bd48"
+      }
+    ],
+    "children": [
+      {
+        "id": 13759,
+        "lastModifiedDate": "2020-07-15T03:47:36.513Z",
+        "createdDate": "0001-01-01T00:00:00Z",
+        "properties": [
+          {
+            "alias": "managePermissions",
+            "value": null,
+            "id": 0,
+            "guid": "d2dec64f-85da-465a-996d-f4fef9ef24f9"
+          },
+          {
+            "alias": "widgetAlias",
+            "value": "documentSearchGql",
+            "id": 469542,
+            "guid": "0e2dad17-9c16-4410-a6f7-ae602b0a67b4"
+          },
+          {
+            "alias": "widgetRestricted",
+            "value": "0",
+            "id": 469543,
+            "guid": "ab0edd2d-57a2-4153-a1ba-851552abf252"
+          },
+          {
+            "alias": "widgetConfigurationValues",
+            "value": "{\r\n  \"guid\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"name\": \"GQL - Documents Rollup (BASE)\",\r\n  \"alias\": \"gqlDocumentRollup\",\r\n  \"description\": null,\r\n  \"iconClass\": \"icomoon-cube3\",\r\n  \"category\": \"Uncategorised.\",\r\n  \"compatibility\": {\r\n    \"desktop\": true,\r\n    \"mobile\": false,\r\n    \"hub\": false,\r\n    \"engage\": false\r\n  },\r\n  \"propertyEditors\": null,\r\n  \"values\": {\r\n    \"categories\": \"1375,1376,1379,1378,1384,1386,3580,3581,3543,1392,1385\",\r\n    \"gql\": \"query documents($documentQuery: String = \\\"+documentTypePath:(UnilyDocument)\\\") {\\r\\n  content {\\r\\n    documents: byQueryText(take: 10, skip: 0, queryText: $documentQuery) {\\r\\n      totalRows\\r\\n      data {\\r\\n        id\\r\\n        nodeName\\r\\n        createDate\\r\\n        lastModifiedDate\\r\\n        nodeTypeAlias\\r\\n        url\\r\\n        openGraphSummary {\\r\\n          category\\r\\n          title\\r\\n          type\\r\\n        }\\r\\n        properties {\\r\\n          ... on UnilyDocument {\\r\\n            categoryField {\\r\\n              id\\r\\n              openGraphSummary {\\r\\n              \\ttitle\\r\\n              }\\r\\n            }\\r\\n            location {\\r\\n              id, \\r\\n              openGraphSummary{\\r\\n              \\ttitle\\r\\n            \\t}\\r\\n            }\\r\\n            title\\r\\n            umbracoFile\\r\\n            essentialFile\\r\\n            umbracoExtension\\r\\n            author {\\r\\n              id\\r\\n              displayName\\r\\n              email\\r\\n            }\\r\\n          }\\r\\n        }\\r\\n      }\\r\\n    }\\r\\n  }\\r\\n}\\r\\n\",\r\n    \"viewModel\": {\r\n      \"script\": \"function(queryContextProvider, gqlService){\\n /* 5.27+ */\\n var searchFields = [\\\"title\\\", \\\"author__SearchableValue\\\", \\\"umbracoFile\\\", \\\"umbracoExtension\\\"]; \\n var queryParts = [\\n  \\\"+documentTypePath:(UnilyDocument)\\\"\\n ]; \\n var widget = queryContextProvider.widget;\\n var unenrichedWidget = queryContextProvider.unenrichedWidget;\\n var model = {\\n  issues:[], \\n  unenrichedWidget: unenrichedWidget,\\n  baseQuery: \\\"\\\",\\n  searchFields: searchFields,\\n  gql: widget.gql,\\n  // include first results. \\n  results: null\\n };\\n \\n try {\\n  // query document.category field with values from categories: \\n  addTerms(\\\"categories\\\", \\\"categoryField\\\"); \\n  // query document.locations field with values from locations: \\n  addTerms(\\\"locations\\\", \\\"location\\\"); \\n  \\n  model.baseQuery = queryParts.join(\\\" \\\");\\n  model.results = query();\\n \\n }catch(er){\\n  model.issues.push(er);\\n }\\n \\n\\n \\n return model; \\n \\n function addTerms(widgetProperty, documentPropertyAlias, combine) {\\n  combine || (combine = \\\" OR \\\"); \\n  // should be string values eg \\\"1,23,444\\\"\\n  var widgetValues = model.unenrichedWidget[widgetProperty];\\n  if(!widgetValues){\\n   model.issues.push(\\\"widgetProperty doesnt exist: \\\" + widgetProperty);\\n   return; \\n  }\\n  var ids = widgetValues.split(\\\",\\\");\\n  queryParts.push(\\\"+\\\" + documentPropertyAlias + \\\":(\\\" + ids.join(combine) + \\\")\\\");\\n }\\n \\n function query(){\\n  var result = JSON.parse(gqlService.search({\\n   query: widget.gql,\\n   variables: {\\n    \\\"documentQuery\\\": queryParts.join(\\\" \\\")\\n   }\\n  }));\\n  \\n  return result\\n }\\n}\"\r\n    },\r\n    \"viewAllUrl\": \"\",\r\n    \"buttonText\": \"\",\r\n    \"locations\": \"\"\r\n  },\r\n  \"enabled\": true\r\n}",
+            "id": 469544,
+            "guid": "d50b0280-e797-42f8-a8b2-592c819dbe6b"
+          }
+        ],
+        "children": null,
+        "uniqueId": "0104f82e-a777-4310-9ff3-d3fd71f3620a",
+        "name": "Document Search - GQL",
+        "documentTypeAlias": "WidgetConfiguration",
+        "parentUniqueId": "836766ae-f39b-4348-a041-598f1042cecb",
+        "published": true,
+        "systemManaged": false,
+        "trashed": false
+      }
+    ],
+    "uniqueId": "836766ae-f39b-4348-a041-598f1042cecb",
+    "name": "GQL - Documents Rollup (BASE)",
+    "documentTypeAlias": "UserWidget",
+    "parentUniqueId": "95cf581e-b7ef-4844-9b64-852dfa20838d",
+    "published": true,
+    "systemManaged": false,
+    "trashed": false
+  }

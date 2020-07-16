@@ -1,0 +1,42 @@
+{
+  "name": "widget-gql-document-search-rollup",
+  "version": "1.0.0",
+  "description": "Document GQL Search",
+  "scripts": {
+    "clean": "del-cli dist",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "node ./upload-to-unily.js",
+    "build": "npm run build:prod && build:upload",
+    "build:dev": "npm run clean && webpack --watch --mode=production",
+    "build:prod": "npm run clean && webpack --mode=production",
+    "build:upload": "npm run upload"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/angular": "1.6.57",
+    "@types/jquery": "3.3.1",
+    "@types/kendo-ui": "2019.3.1",
+    "@types/moment": "~2.13.0",
+    "@types/ng-dialog": "~0.6.2",
+    "@types/underscore": "1.8.8",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "core-js": "^3.3.2",
+    "del-cli": "3.0.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-angular": "^4.0.1",
+    "fork-ts-checker-webpack-plugin": "^2.0.0",
+    "ts-import-plugin": "~1.6.6",
+    "ts-loader": "~6.2.1",
+    "typescript": "^3.9.6",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "unily-connect-client": "file:../unily-connect-client",
+    "webpack": "4.41.2",
+    "webpack-bundle-analyzer": "~3.7.0",
+    "webpack-cli": "3.3.10",
+    "webpack-split-chunks": "~0.2.1"
+  }
+}
