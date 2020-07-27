@@ -11,8 +11,8 @@
 From the console (vscode, cmd prompt, powershell etc type:)
 
 - `> npm install` - update. the node_modules with the required packages for webpack, typescript, typings and dependencies
-- `> npx run build:dev` - cleans the compiled folder out
-- `> npx run upload` - upload the scripts, content, document types
+- `> npm run build:dev` - cleans the compiled folder out
+- `> npm run upload` - upload the scripts, content, document types
 
 ``` Text
 Starting type checking service...
